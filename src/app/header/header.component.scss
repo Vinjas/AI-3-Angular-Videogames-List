@@ -2,7 +2,13 @@
 
 .header {
     display: flex;
-    padding: 24px 0;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-size(tablet-portrait-up) {    
+        flex-direction: row;
+        padding: 24px 0;
+    }
     
     &__logo {
         font-family: $Bebas;
@@ -13,17 +19,46 @@
     &__menu {
         display: flex;
         width: 100%;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
+
+        @include for-size(tablet-portrait-up) {    
+            justify-content: flex-end;
+        }
+
+        @include for-size(phone-only) {    
+           flex-direction: column;
+        }
 
         &--option {
             padding : 8px 16px;
             margin: 0 8px;
-            background-color: $dark-grey;
-            border-radius: 24px;
+            background: none;
+            border: 1px solid $white;
+            border-radius: 3px;
+
+            @include for-size(phone-only) {    
+                width: 80%;
+                margin: 5px 10px;
+             }
 
             i {
                 margin: 0 4px;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $dark-grey;
+            }
+        }
+
+        &--login {
+            background-color: $main;
+            border: none;
+
+            &:hover {
+                background-color: $dark-grey;
+                color: $white;
             }
         }
     }
