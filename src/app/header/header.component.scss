@@ -1,0 +1,31 @@
+@import '../../styles.scss';
+
+.header {
+    display: flex;
+    padding: 24px 0;
+    
+    &__logo {
+        font-family: $Bebas;
+        font-size: 48px;
+        color: $main;
+    }
+
+    &__menu {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--option {
+            padding : 8px 16px;
+            margin: 0 8px;
+            background-color: $dark-grey;
+            border-radius: 24px;
+
+            i {
+                margin: 0 4px;
+            }
+        }
+    }
+}
+
