@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Videogame } from '../models/videogame';
 import { VideogamesList } from '../models/videogames-list';
 import { ApiService } from '../services/api.service';
@@ -28,7 +29,7 @@ export class GamesListComponent implements OnInit {
   public sportsList : VideogamesList = { results: [], count: 0 };
   public fightingList : VideogamesList = { results: [], count: 0 };
 
-  constructor(private apiservice : ApiService) { }
+  constructor(private apiservice : ApiService, private route: ActivatedRoute) { }
 
   // Configuracion para el Modulo de Slick-carousel.
   // La documentacion puede consultarse aqui: https://kenwheeler.github.io/slick/
@@ -72,7 +73,7 @@ export class GamesListComponent implements OnInit {
       }
     }
   ]};
-
+  
   ngOnInit(): void {
     // GET para la lista de videojuegos de diferentes generos
     this.apiservice.getVideogamesListFiltered(ACTION).subscribe({

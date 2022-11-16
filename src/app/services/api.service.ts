@@ -22,7 +22,7 @@ export class ApiService {
   }
 
   // Llamadaa la API de RAWG que devolvera la información completa de un videojuego segun su id
-  public getVideogame(id: number): Observable<Videogame> {
+  public getVideogame(id: string | null): Observable<Videogame> {
     let videogameDetailsURL = `${this.VideogamesURL}/${id}?key=${this.RAWG_API_KEY}`;
     
     return this.http.get<Videogame>(videogameDetailsURL);

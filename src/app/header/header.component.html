@@ -1,13 +1,28 @@
 <div class="header">
-    <div class="header__logo">VideoGames</div>
+    <div class="header__logo" [routerLink]="['/']">VideoGames</div>
 
     <div class="header__menu">
-        <div class="header__menu--option">Contact</div>
-        <div class="header__menu--option">About Us</div>
+        <div class="header__menu--option">
+            <a class="header__menu--link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+                Home
+            </a>
+        </div>
+        <div class="header__menu--option">
+            <a class="header__menu--link" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
+                Contact
+            </a>
+        </div>
+        <div class="header__menu--option">
+            <a class="header__menu--link" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">
+                About Us
+            </a>
+        </div>
         
         <div class="header__menu--option header__menu--login">
             <i class="fa-solid fa-user"></i>
-            My Account
+            <a class="header__menu--link" routerLink="/my-account" routerLinkActive="active" ariaCurrentWhenActive="page">
+                My Account
+            </a>
         </div>
     </div>
 </div>

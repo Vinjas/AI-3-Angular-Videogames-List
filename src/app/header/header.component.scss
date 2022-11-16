@@ -14,6 +14,7 @@
         font-family: $Bebas;
         font-size: 48px;
         color: $main;
+        cursor: pointer;
     }
 
     &__menu {
@@ -47,7 +48,15 @@
             }
 
             &:hover {
+                color: $dark-grey;
                 background-color: $white;
+            }
+        }
+
+        &--link {
+            text-decoration: none;
+
+            &:hover {
                 color: $dark-grey;
             }
         }

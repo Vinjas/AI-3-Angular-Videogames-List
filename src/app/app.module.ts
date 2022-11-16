@@ -14,6 +14,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { DetailsGameComponent } from './details-game/details-game.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     GameTileComponent,
     DetailsGameComponent,
     ContactComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    MyaccountComponent
   ],
   imports: [
     BrowserModule,
