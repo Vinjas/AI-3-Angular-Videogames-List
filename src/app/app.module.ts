@@ -6,22 +6,26 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
+import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
-import { TopContentComponent } from './top-content/top-content.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { GameTileComponent } from './game-tile/game-tile.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { DetailsGameComponent } from './details-game/details-game.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContentComponent,
+    MainComponent,
     FooterComponent,
-    TopContentComponent,
     GamesListComponent,
-    GameTileComponent
+    GameTileComponent,
+    DetailsGameComponent,
+    ContactComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
 
+    @include for-size(tablet-portrait-up) {    
+        padding: 0 40px;
+    }
+
     &__title {
         font-size: 36px;
         text-align: center;
