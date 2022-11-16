@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This is the list of all the extra (non-default) libraries used in this project:
 * FontAwesome (icons)
 * RxJS (reactive programming and observables)
+* Ngx-slick-carousel (for carousel effect on videogames lists)
 
 ## APIs used
 

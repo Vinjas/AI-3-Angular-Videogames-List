@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+.games-list {
+    
+    &__genre {
+
+        &--title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        &--carousel {
+            padding-bottom: 36px;
+        }
+
+        &--row {
+            display: flex;
+            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &--tile {
+            //max-width: 25%;
+            flex: 1;
+            margin: 24px 16px;
+        }
+    }
+}

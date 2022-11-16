@@ -1,1 +1,65 @@
-{{videogamesList.results}}
+<div class="games-list">
+  <div class="games-list__genre">
+
+    <h2 class="games-list__genre--title">Action</h2>
+    <ngx-slick-carousel
+      class="carousel games-list__genre--carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div
+        ngxSlickItem
+        *ngFor="let actionGames of actionList.results"
+        class="slide games-list__genre--tile"
+      >
+        <app-game-tile [gamesList]="actionGames"></app-game-tile>
+      </div>
+    </ngx-slick-carousel>
+
+    <h2 class="games-list__genre--title">RPG</h2>
+    <ngx-slick-carousel
+      class="carousel games-list__genre--carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div
+        ngxSlickItem
+        *ngFor="let rpgGames of rpgList.results"
+        class="slide games-list__genre--tile"
+      >
+        <app-game-tile [gamesList]="rpgGames"></app-game-tile>
+      </div>
+    </ngx-slick-carousel>
+
+    <h2 class="games-list__genre--title">FIGHTING</h2>
+    <ngx-slick-carousel
+      class="carousel games-list__genre--carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div
+        ngxSlickItem
+        *ngFor="let fightingGames of fightingList.results"
+        class="slide games-list__genre--tile"
+      >
+        <app-game-tile [gamesList]="fightingGames"></app-game-tile>
+      </div>
+    </ngx-slick-carousel>
+
+    <h2 class="games-list__genre--title">SPORTS</h2>
+    <ngx-slick-carousel
+      class="carousel games-list__genre--carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div
+        ngxSlickItem
+        *ngFor="let sportsGames of sportsList.results"
+        class="slide games-list__genre--tile"
+      >
+        <app-game-tile [gamesList]="sportsGames"></app-game-tile>
+      </div>
+    </ngx-slick-carousel>
+
+  </div>
+</div>
