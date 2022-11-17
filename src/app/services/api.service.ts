@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { VideogamesList } from '../models/videogames-list';
 import { Videogame } from '../models/videogame';
+import { Screenshots } from '../models/screenshots';
 
 @Injectable({
   providedIn: 'root'
@@ -28,4 +29,10 @@ export class ApiService {
     return this.http.get<Videogame>(videogameDetailsURL);
   }
 
+  // Llamadaa la API de RAWG que devolvera la información completa de una lista de screenshots
+  public getScreenshots(id: string | null): Observable<Screenshots> {
+    let screenshotsURL = `${this.VideogamesURL}/${id}/screenshots?key=${this.RAWG_API_KEY}`;
+    
+    return this.http.get<Screenshots>(screenshotsURL);
+  }
 }

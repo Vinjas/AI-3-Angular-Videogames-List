@@ -1,0 +1,149 @@
+@import '../../styles.scss';
+
+.details {
+  padding: 0;
+
+  @include for-size(tablet-portrait-up) {
+    padding: 0 40px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 24px 0;
+    text-align: center;
+
+    @include for-size(tablet-portrait-up) {
+        padding: 0 0 24px 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include for-size(tablet-portrait-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__col-screen {
+    max-width: 100%;
+
+    @include for-size(tablet-portrait-up) {
+      max-width: 65%;
+    }
+  }
+
+  &__col-info {
+    max-width: 100%;
+
+    @include for-size(tablet-portrait-up) {
+      max-width: 35%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $black;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 10px;
+    -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+
+    @include for-size(tablet-portrait-up) {
+      margin: 0 0 0 60px;
+      width: 100%;
+    }
+
+
+    &--main-text {
+      font-size: 24px;
+      color: $grey;
+      padding-bottom: 10px;
+    }
+
+    &--secondary-text {
+      color: $white;
+    }
+
+    &--block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 5px solid $dark-grey;
+    }
+  }
+
+  &__screen {
+
+    &--nav {
+      flex: 1;
+      margin: 8px 10px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--nav {
+      max-width: 100%;
+      height: 80px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+      box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__description {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 42px 16px;
+
+    @include for-size(tablet-portrait-up) {
+      padding: 42px 0;
+    }
+  }
+
+  &__comeback {
+    background: $dark-grey;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 32px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+
+    &:hover {
+        background-color: $grey;
+    }
+  }
+
+
+}

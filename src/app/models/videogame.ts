@@ -7,4 +7,5 @@ export interface Videogame {
   released: string;
   rating: number;
   background_image: string;
+  description_raw?: string;
 }

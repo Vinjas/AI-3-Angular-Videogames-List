@@ -33,7 +33,7 @@ export class GamesListComponent implements OnInit {
 
   // Configuracion para el Modulo de Slick-carousel.
   // La documentacion puede consultarse aqui: https://kenwheeler.github.io/slick/
-  slideConfig = {
+  public slideConfig = {
     "slidesToShow": 6, 
     "slidesToScroll": 3,  
     responsive: [

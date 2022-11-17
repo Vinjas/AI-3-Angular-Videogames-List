@@ -53,8 +53,17 @@
             }
         }
 
+        &--home {
+            display: none;
+            
+            @include for-size(tablet-portrait-up) {    
+                display: block;
+            }
+        }
+
         &--link {
             text-decoration: none;
+            cursor: pointer;
 
             &:hover {
                 color: $dark-grey;

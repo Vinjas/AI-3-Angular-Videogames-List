@@ -1,3 +1,56 @@
-<div>
-    <p>{{gameDetails.name}}</p>
+<div class="details">
+
+  <h1 class="details__title">{{ gameDetails.name }}</h1>
+
+  <div class="details__container">
+    <div class="details__col-screen">
+      <ngx-slick-carousel
+        class="carousel slider-main details__carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfigMain"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let screen of screenshots.results"
+          class="slide details__screen"
+        >
+          <img class="details__img" src="{{ screen.image }}" />
+        </div>
+      </ngx-slick-carousel>
+
+      <ngx-slick-carousel
+        class="carousel slider-nav details__carousel--nav"
+        #slickModal="slick-carousel"
+        [config]="slideConfigNav"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let screen of screenshots.results"
+          class="slide details__screen--nav"
+        >
+          <img class="details__img--nav" src="{{ screen.image }}" />
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+    <div class="details__col-info details__info">
+      <div class="details__info--block">
+        <p class="details__info--main-text">Rating</p>
+        <p class="details__info--secondary-text">{{ gameDetails.rating }} / 5.0</p>
+      </div>
+      <div class="details__info--block">
+        <p class="details__info--main-text">Release Date</p>
+        <p class="details__info--secondary-text">{{ gameDetails.released }}</p>
+      </div>
+      <div class="details__info--block">
+        <p class="details__info--main-text">Platforms</p>
+        <p class="details__info--secondary-text" *ngFor="let plat of gameDetails.platforms">{{ plat.platform.name }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="details__description">{{ gameDetails.description_raw }}</p>
+
+  <button [routerLink]="['/']" class="details__comeback">Go back</button>
 </div>
