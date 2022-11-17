@@ -15,6 +15,8 @@ import { DetailsGameComponent } from './details-game/details-game.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
     DetailsGameComponent,
     ContactComponent,
     AboutUsComponent,
-    MyaccountComponent
+    MyaccountComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

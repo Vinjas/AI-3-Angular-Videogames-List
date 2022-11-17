@@ -1,0 +1,27 @@
+<div class="header">
+    <div class="header__logo">VideoGames</div>
+</div>
+
+<div class="register">
+    <div class="register__info">
+        <h1 class="register__title">Register new User</h1>
+
+        <form class="register__form" action="#">
+            <label class="register__form--label" for="name">Username</label>
+            <input [(ngModel)]="name" class="register__form--input" id="name" name="name" placeholder="Username">
+            
+            <label class="register__form--label" for="email">Email</label>
+            <input [(ngModel)]="email" class="register__form--input" id="email" name="email" placeholder="Email">
+
+            <label class="register__form--label" for="password">Password</label>
+            <input [(ngModel)]="password" type="password" class="register__form--input" id="password" name="password" placeholder="Password">
+
+            <label class="register__form--label" for="passwordConfirm">Confirm password</label>
+            <input [(ngModel)]="passwordConfirm" type="password" class="register__form--input" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm password">
+
+            <input class="register__form--submit" type="submit" value="Send" (click)="register()"/>
+        </form>
+
+        <button [routerLink]="['/']" class="register__goback">Go back</button>
+    </div>
+</div>

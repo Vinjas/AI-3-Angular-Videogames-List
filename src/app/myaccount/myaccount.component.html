@@ -1,1 +1,20 @@
-<p>myaccount works!</p>
+<app-header></app-header>
+
+<div class="myaccount">
+    <h1 class="myaccount__title">My Account</h1>
+
+    <div class="myaccount__info">
+        <h2 class="myaccount__name">Username</h2>
+        <p class="myaccount__value">{{user}}</p>
+
+        <h2 class="myaccount__name">Email</h2>
+        <p class="myaccount__value">{{email}}</p>
+
+        <button class="myaccount__out" (click)="logout()">Log out</button>
+    </div>
+    
+    
+
+</div>
+
+<app-footer></app-footer>

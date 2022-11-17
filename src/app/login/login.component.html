@@ -1,0 +1,24 @@
+<div class="header">
+    <div class="header__logo">VideoGames</div>
+</div>
+
+<div class="login">
+    <div class="login__info">
+        <h1 class="login__title">Log in / Register</h1>
+
+        <form class="login__form" action="#">
+            <label class="login__form--label" for="name">Username</label>
+            <input [(ngModel)]="name" class="login__form--input" id="name" name="name" placeholder="Username">
+            
+            <label class="login__form--label" for="password">Password</label>
+            <input [(ngModel)]="password" type="password" class="login__form--input" id="password" name="password" placeholder="Password">
+    
+            <input class="login__form--submit" type="submit" value="Log in" (click)="login()" />
+        </form>
+        
+        <button [routerLink]="['/register']" class="login__register">Register</button>
+
+    <div>{{error}}</div>
+    </div>
+
+</div>

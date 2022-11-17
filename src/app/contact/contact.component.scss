@@ -1,0 +1,59 @@
+@import '../../styles.scss';
+
+.contact {
+    padding: 0;
+
+    @include for-size(tablet-portrait-up) {
+      padding: 0 40px;
+    }
+    
+    &__title {
+        font-size: 36px;
+        text-align: center;
+        padding: 16px 10px;
+
+        @include for-size(tablet-portrait-up) {
+            font-size: 48px;
+            padding: 48px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--label {
+            font-size: 24px;
+        }
+
+        &--input {
+            color: $black;
+            padding: 10px 20px;
+            margin-bottom: 28px;
+        }
+
+        &--textarea {
+            color: $black;
+            padding: 10px 20px;
+            margin-bottom: 28px;
+        }
+
+        &--submit {
+            background: $dark-grey;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 32px;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+            box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+        
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+}
