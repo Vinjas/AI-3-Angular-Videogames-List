@@ -9,6 +9,11 @@
         flex-direction: row;
         padding: 24px 40px;
     }
+
+    @include for-size(big-desktop-up) {    
+        flex-direction: row;
+        padding: 24px 240px;
+    }
     
     &__logo {
         font-family: $Bebas;

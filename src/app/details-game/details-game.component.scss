@@ -7,6 +7,10 @@
     padding: 0 40px;
   }
 
+  @include for-size(big-desktop-up) {    
+    padding: 0 240px;
+  }
+
   &__title {
     font-size: 32px;
     font-weight: 700;
@@ -15,6 +19,7 @@
 
     @include for-size(tablet-portrait-up) {
         padding: 0 0 24px 0;
+        text-align: left;
     }
   }
 
@@ -96,6 +101,11 @@
     -webkit-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 15px 4px rgba(0,0,0,0.5);
+
+    @include for-size(big-desktop-up) {
+      height: 500px;
+      width: 950px;
+    }
 
     &:hover {
       cursor: pointer;
